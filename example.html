@@ -50,8 +50,6 @@
 <div id="btn-area">
     <button onClick="getCurLocation()">获取精确定位信息</button>
     <button onClick="geolocation.getIpLocation(showPosition, showErr)">获取粗糙定位信息</button>
-    <button onClick="showWatchPosition()">开始监听位置</button>
-    <button onClick="showClearWatch()">停止监听位置</button>
 </div>
 
 <script type="text/JavaScript">
@@ -80,17 +78,6 @@
         document.getElementById("pos-area").scrollTop = document.getElementById("pos-area").scrollHeight;
     };
 
-    function showWatchPosition() {
-        document.getElementById("demo").innerHTML += "开始监听位置！<br /><br />";
-        geolocation.watchPosition(showPosition);
-        document.getElementById("pos-area").scrollTop = document.getElementById("pos-area").scrollHeight;
-    };
-
-    function showClearWatch() {
-        geolocation.clearWatch();
-        document.getElementById("demo").innerHTML += "停止监听位置！<br /><br />";
-        document.getElementById("pos-area").scrollTop = document.getElementById("pos-area").scrollHeight;
-    };
 </script>
 </body>
 </html>
